@@ -1,0 +1,25 @@
+<%- include layouts/header.ejs %>
+	<div class="container">
+		<div class="row">
+			<h1><%- tagline %></h1>
+			<a href="/category/create" class="btn btn-primary">Insert</a>
+			<br><br>
+			<div class="table-responsive">
+			  <table class="table">
+			    <tr>
+			    	<td>Name</td>
+			    	<td>Action</td>
+			    </tr>
+
+			    <% categorys.forEach(function (category) { %>
+			    <tr>
+			    	<td><%= category.name %></td>
+			    	<td><a href="/category/edit/<%= category.id %>" class="btn btn-success">Edit</a>&nbsp;&nbsp;<a href="/category/destroy/<%= category.id %>" class="btn btn-danger">Delete</a></td>
+			    </tr>
+			    <% }); %>
+			  
+			  </table>
+			</div>
+		</div>
+	</div>
+<%- include layouts/footer.ejs %>

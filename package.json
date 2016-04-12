@@ -1,0 +1,37 @@
+{
+  "name": "nodejscrud",
+  "version": "1.0.0",
+  "description": "blog node and express",
+  "main": "app.js",
+  "scripts": {
+    "test": "node app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tegarkurniawan/nodeblog.git"
+  },
+  "keywords": [
+    "nodejscrud"
+  ],
+  "author": "Muhamad Tegar Kurniawan",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/tegarkurniawan/nodeblog/issues"
+  },
+  "homepage": "https://github.com/tegarkurniawan/nodeblog/#readme",
+  "dependencies": {
+    "bcrypt-nodejs": "0.0.3",
+    "body-parser": "^1.14.1",
+    "connect-flash": "^0.1.1",
+    "cookie-parser": "^1.4.0",
+    "ejs": "^2.3.4",
+    "express": "^4.13.3",
+    "express-myconnection": "^1.0.4",
+    "express-session": "^1.12.1",
+    "morgan": "^1.6.1",
+    "multer": "^1.1.0",
+    "mysql": "^2.9.0",
+    "passport": "^0.3.2",
+    "passport-local": "^1.0.0"
+  }
+}
