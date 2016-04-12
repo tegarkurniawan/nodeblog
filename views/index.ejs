@@ -1,3 +1,78 @@
 <%- include layouts/header.ejs %>
-<h1>Selamat Datang</h1>
+<div class="ui container content">
+		<div class="ui stackable doubling grid">
+			<!-- Middle Content -->
+			<div class="twelve wide column">
+				<div align="center">
+					
+					<div class="ui divider"></div>
+					<div class="ui items">
+					<% artikels.forEach(function (artikel) { %>
+						<div class="item" align="left">
+							<div class="image">
+								<img src="/img/<%= artikel.photo %>">
+							</div>
+							<div class="content">
+								<a class="header"><%= artikel.title %></a>
+								<div class="meta">
+									<span><i class="calendar icon"></i> 10/04/2016 <i class="tag icon"></i> Javascript <i class="user icon"></i> Admin</span>
+								</div>
+								<div class="description" align="justify">
+									<p><%= artikel.description %></p>
+								</div>
+								<div class="extra">
+									<div class="ui blue right floated button">Read More</div>
+								</div>
+							</div>
+						</div>
+						<div class="ui divider"></div>
+					<% }); %>
+						
+					</div>
+					<div class="ui divider"></div>
+					<div class="ui buttons">
+						<button class="ui button disabled">Previous</button>
+						<button class="ui blue button">1</button>
+						<button class="ui button">2</button>
+						<button class="ui button">3</button>
+						<button class="ui button">...</button>
+						<button class="ui button">n</button>
+						<button class="ui button">Next</button>
+					</div>
+				</div>
+			</div>
+			<!-- Right Sidebar -->
+			<div class="four wide column">
+				<div class="ui fluid vertical menu moderns">
+					<a href="" class="header item">Category</a>
+					<% categorys.forEach(function (category) { %>
+					<a href="" class="item"><%= category.name %></a>
+					<% }); %>
+				</div>
+				<div class="ui segments moderns">
+					<div class="ui header segment">
+						Picture Article
+					</div>
+					<div class="ui segment">
+						<div class="owl-carousel" id="single-slider">
+						 
+						  <% artikels.forEach(function (artikel) { %>
+						    <div class="item">
+						    	<p><img class="ui rounded image" src="/img/<%= artikel.photo %>"></p>
+						    	<div align="justify">
+						    		<div class="ui header"><%= artikel.title %></div>
+						    		<p><%= artikel.description %></p>
+						    	</div>
+						    </div>
+						   <% }); %> 
+						</div>
+					</div>
+					<div class="ui secondary segment">
+						Other Content
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
 <%- include layouts/footer.ejs %>
