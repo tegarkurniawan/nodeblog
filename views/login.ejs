@@ -5,7 +5,7 @@
 	<% if (message.length > 0) { %>
 		<div class="alert alert-danger"><%= message %></div>
 	<% } %>
-	
+
 	<form class="ui form" method="POST" action="/login/do">
 	  <div class="field">
 	    <label>Username</label>
@@ -15,7 +15,7 @@
 	    <label>Last Name</label>
 	    <input type="password" name="password" placeholder="Password">
 	  </div>
-	  <button class="ui button" type="submit">Submit</button>
+	  <button class="ui green button" type="submit">Login</button>
 	</form>
 </div>
 <%- include layouts/footer.ejs %>

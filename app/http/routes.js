@@ -6,6 +6,7 @@ var CategoryController = require('../controllers/CategoryController');
 module.exports = function (app, upload, passport) {
 	
 	app.get('/', isGuest, IndexController.index);
+	app.get('/readmore/:name', isGuest, IndexController.readmore);
 	app.get('/login', isGuest, LoginController.index);
 	app.post('/login/do', isGuest, passport.authenticate('local-login', {
             successRedirect : '/dashboard', // redirect to the secure INDEX section

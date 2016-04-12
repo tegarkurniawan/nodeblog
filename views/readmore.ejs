@@ -3,34 +3,21 @@
 		<div class="ui stackable doubling grid">
 			<!-- Middle Content -->
 			<div class="twelve wide column">
-				<div align="center">
-					
-					
-					<div class="ui items">
-					<% artikels.forEach(function (artikel) { %>
-						<div class="item" align="left">
-							<div class="image">
-								<img src="/img/<%= artikel.photo %>">
-							</div>
-							<div class="content">
-								<a class="header"><%= artikel.title %></a>
-								<div class="meta">
-									<span><i class="calendar icon"></i> 10/04/2016 <i class="tag icon"></i> Javascript <i class="user icon"></i> Admin</span>
-								</div>
-								<div class="description" align="justify">
-									<p><%= artikel.description.substring(0, 50); %>...</p>
-								</div>
-								<div class="extra">
-									<a href="/readmore/<%= artikel.title %>"><div class="ui blue right floated button">Read More</div></a>
-								</div>
-							</div>
-						</div>
-						<div class="ui divider"></div>
-					<% }); %>
-						
-					</div>
-					
+				<div class="image">
+					<img src="/img/<%= artikeles[0].photo %>" width="70%">
 				</div>
+				<div class="content">
+					<a class="header"><h1><%= artikeles[0].title %></h1></a>
+					<div class="meta">
+						<span><i class="calendar icon"></i> 10/04/2016 <i class="tag icon"></i> Javascript <i class="user icon"></i> Admin</span>
+					</div>
+					<div class="description" align="justify">
+						<p><%= artikeles[0].description %></p>
+					</div>
+					<div class="extra">
+						
+						</div>
+					</div>
 			</div>
 			<!-- Right Sidebar -->
 			<div class="four wide column">
@@ -65,5 +52,4 @@
 			</div>
 		</div>
 	</div>
-
 <%- include layouts/footer.ejs %>
