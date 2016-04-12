@@ -20,12 +20,11 @@
 	npm install
 
 ## Configuration Database
-		
-		//app.js
+	// config/database.js
         host: 'localhost',
         user: 'root',
         password : '',
-        database:'nodejscrud'	
+        database:'nodeblog'	
 
 ## Start HTTP Server
 
