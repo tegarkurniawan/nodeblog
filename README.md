@@ -20,6 +20,7 @@
 	npm install
 
 ## Configuration Database
+
 	// config/database.js
         host: 'localhost',
         user: 'root',
@@ -28,7 +29,12 @@
 
 ## Start HTTP Server
 
-		node app.js 
+		node app.js
+## login Admin
+
+/login
+username : admin
+password : admin
 
 ## License
 
